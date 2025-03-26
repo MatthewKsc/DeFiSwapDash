@@ -1,9 +1,11 @@
 import './App.css'
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <>
-      <h1>Welcome to DeFiSwapDash</h1>
+      <Navbar />
+      <h3>Welcome to DeFiSwapDash</h3>
     </>
   )
 }
