@@ -1,11 +1,24 @@
-import './App.css'
+import { Outlet } from 'react-router'
+import { Container } from '@mui/material'
 import Navbar from './components/Navbar/Navbar'
+import './App.css'
 
 function App() {
   return (
     <>
       <Navbar />
-      <h3>Welcome to DeFiSwapDash</h3>
+
+      <Container
+        maxWidth={ 'xl' }
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          pt: { xs: 14, sm: 16 },
+        }}
+      >
+        <Outlet />
+      </Container>
     </>
   )
 }
