@@ -12,6 +12,7 @@ export const NavLogoContainer = styled(Box)(({ theme }) => ({
     padding: '0 1rem',
     lineHeight: '0',
     fontSize: '2rem',
+    cursor: 'pointer'
 }));
 
 export const NavLinksContainer = styled(Box)(({ theme }) => ({
