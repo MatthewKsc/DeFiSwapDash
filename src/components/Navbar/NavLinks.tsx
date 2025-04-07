@@ -1,40 +1,27 @@
-import { Publish, Savings, SwapCalls } from "@mui/icons-material"
-import { NavLinksContainer } from "../styled/Navbar"
 import { Button } from "@mui/material"
-import React from 'react'
 import { NavLink } from "react-router"
 
-function NavLinks() {
+import { NavLinksContainer } from "../styled/Navbar"
+import { INavbarLink } from "./models"
+
+interface NavLinksProps {
+  links: INavbarLink[],
+}
+
+function NavLinks(props: NavLinksProps) {
   return (
     <NavLinksContainer>
+      {props.links
+        .filter(link => !link.onlyMobileView)
+        .map((link, index) => (
         <Button
+          key={index}
           component={NavLink}
-          to="/swap"
+          to={link.to}
           size="medium"
-          startIcon={<SwapCalls />}
-        >
-          Swap
-        </Button>
-
-        <Button
-          component={NavLink}
-          to="/deploy"
-          size="medium"
-          startIcon={<Publish />}
-          disabled
-        >
-          Deploy
-        </Button>
-
-        <Button
-          component={NavLink}
-          to="/portfolio"
-          size="medium"
-          startIcon={<Savings />}
-          disabled
-        >
-          Portfolio
-        </Button>
+          startIcon={link.icon}
+          disabled={link.disabled}>{ link.label }</Button>
+      ))}
     </NavLinksContainer>
   )
 }
