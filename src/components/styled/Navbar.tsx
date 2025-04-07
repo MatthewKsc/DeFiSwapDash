@@ -5,6 +5,10 @@ export const NavBarContainer = styled(Container)(({ theme })=> ({
     border: '1px solid #76ab3c',
     boxShadow: '0 0 8px #76ab3c', 
     borderRadius: '1.5rem',
+    [theme.breakpoints.down('md')]: {
+        borderRadius: 0,
+        border: 'none',
+    },
 }));
 
 export const NavLogoContainer = styled(Box)(({ theme }) => ({
@@ -12,7 +16,10 @@ export const NavLogoContainer = styled(Box)(({ theme }) => ({
     padding: '0 1rem',
     lineHeight: '0',
     fontSize: '2rem',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    [theme.breakpoints.down('md')]: {
+        flexGrow: 1,
+    },
 }));
 
 export const NavLinksContainer = styled(Box)(({ theme }) => ({
