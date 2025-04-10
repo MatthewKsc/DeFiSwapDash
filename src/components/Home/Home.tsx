@@ -1,9 +1,10 @@
-import Typography from '@mui/material/Typography'
+import WelcomeSection from './WelcomeSection'
+import DexSection from './DexSection'
 
 function Home() {
   return (
     <>
-        <Typography variant='h3'>Welcome to DeFiSwapDash</Typography>
+        <WelcomeSection/>
     </>
   )
 }
