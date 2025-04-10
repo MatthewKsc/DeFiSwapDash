@@ -1,17 +1,17 @@
-import { Box, Card, styled } from "@mui/material";
+import { Box, Card, CardContent, styled } from "@mui/material";
 
 export const WelcomeSectionBox = styled(Box)(({ theme }) => ({
     width: '100%',
-    padding: '5rem 0 4rem 0',
+    padding: '5rem 0',
     backgroundColor: theme.palette.background.default,
 }));
 
 export const DefaultHomeSection = styled(Box)(({ theme }) => ({
     width: '100%',
-    padding: '10rem 0 5rem 0',
+    padding: '10rem 0',
     backgroundColor: theme.palette.background.default,
     borderRadius: '12px',
-    '.dex-card': {
+    '.two-column-card': {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center'
@@ -28,3 +28,14 @@ export const FeatureCard = styled(Card)(({ theme }) => ({
       boxShadow: '0 0.75rem 1.5rem rgba(66, 82, 48, 0.25)',
     },
 }));
+
+export const BlockchainCardContent = styled(CardContent)(({ theme }) => ({
+    p: 4, 
+    display: 'flex', 
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: '0.5rem',
+    '.link-button': {
+        minWidth: '150px',
+    }
+}))

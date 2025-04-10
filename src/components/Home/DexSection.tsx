@@ -21,7 +21,7 @@ function DexSection() {
                 {statsCards.map((card, index) => (
                     <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                         <FeatureCard>
-                            <CardContent className='dex-card'>
+                            <CardContent className='two-column-card'>
                                 <div className='information-type'>
                                     <Typography variant="h3" gutterBottom>
                                         {card.title}
