@@ -1,9 +1,17 @@
-import Typography from '@mui/material/Typography'
+import BlockchainInteractionsSection from './BlockchainInteractionsSection'
+import PortfolioSection from './PortfolioSection'
+import WelcomeSection from './WelcomeSection'
+import DexSection from './DexSection'
+import Footer from './Footer'
 
 function Home() {
   return (
     <>
-        <Typography variant='h3'>Welcome to DeFiSwapDash</Typography>
+        <WelcomeSection/>
+        <DexSection />
+        <PortfolioSection />
+        <BlockchainInteractionsSection />
+        <Footer />
     </>
   )
 }
