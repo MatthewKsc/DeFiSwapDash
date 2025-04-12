@@ -45,4 +45,13 @@ export const BlockchainCardContent = styled(CardContent)(({ theme }) => ({
     '.link-button': {
         minWidth: '150px',
     }
-}))
+}));
+
+export const FooterBox = styled(Box)(({ theme }) => ({
+    width: '100%',
+    padding: '1rem',
+    marginBottom: '1rem',
+    borderRadius: '8px',
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.primary.contrastText,
+}));

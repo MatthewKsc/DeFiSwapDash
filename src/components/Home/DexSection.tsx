@@ -1,13 +1,6 @@
 import { Container, Typography, Grid, CardContent } from '@mui/material';
 import { DefaultHomeSection, FeatureCard } from '../styled/Home';
-
-// In ideal world this will be fetched from API to show real time data
-const statsCards = [
-    { title: 'Active Users', value: '125K+', description: 'Monthly active traders' },
-    { title: 'Daily Swaps', value: '1.2M', description: 'Average daily transactions' },
-    { title: 'Total Volume', value: '$3.8B', description: 'Lifetime trading volume' },
-    { title: 'Chains Supported', value: '12', description: 'Major blockchains integrated' },
-];
+import { dexInfoCards } from './consts';
 
 function DexSection() {
   return (
@@ -18,7 +11,7 @@ function DexSection() {
             </Typography>
         
             <Grid container spacing={4}>
-                {statsCards.map((card, index) => (
+                {dexInfoCards.map((card, index) => (
                     <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                         <FeatureCard>
                             <CardContent className='two-column-card'>
