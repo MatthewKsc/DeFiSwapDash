@@ -11,7 +11,7 @@ const statsCards = [
 
 function DexSection() {
   return (
-    <DefaultHomeSection>
+    <DefaultHomeSection backgroundImage="src/assets/dex-background-showcase.png">
         <Container maxWidth="xl">
             <Typography variant="h1" gutterBottom align="center" sx={{ mb: 6 }}>
                 Go to Dex
@@ -26,7 +26,7 @@ function DexSection() {
                                     <Typography variant="h3" gutterBottom>
                                         {card.title}
                                     </Typography>
-                                    <Typography variant="body1" color="text.secondary">
+                                    <Typography variant="h5" color="text.secondary">
                                         {card.description}
                                     </Typography>
                                 </div>

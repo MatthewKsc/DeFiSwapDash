@@ -20,7 +20,7 @@ function WelcomeSection() {
                 <Grid size={{ xs: 12, md: 6 }}>
                     <Box
                         component="img"
-                        src="src/assets/welcomeImg.png"
+                        src="src/assets/welcome-showcase.png"
                         alt="Crypto Trading Platform"
                         sx={{ width: '100%', height: 'auto', borderRadius: 2 }}/>
                 </Grid>

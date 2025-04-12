@@ -5,7 +5,7 @@ import { Publish, WavingHandSharp } from "@mui/icons-material"
 
 function BlockchainInteractionsSection() {
   return (
-    <DefaultHomeSection>
+    <DefaultHomeSection backgroundImage="src/assets/intercations-background-showcase.png">
         <Container maxWidth="xl">
           <Grid container spacing={6} alignItems='center'>
             <Grid size={{ xs: 12, md: 6 }}>
@@ -21,7 +21,7 @@ function BlockchainInteractionsSection() {
                                 <Typography variant="h3" gutterBottom>
                                     GM on Chain
                                 </Typography>
-                                <Typography variant="body1">
+                                <Typography variant="h5" color="text.secondary">
                                     Start your day with on-chain greetings and connect with the community.
                                 </Typography>
                             </div>
@@ -47,7 +47,7 @@ function BlockchainInteractionsSection() {
                                 <Typography variant="h3" gutterBottom>
                                     Deploy
                                 </Typography>
-                                <Typography variant="body1">
+                                <Typography variant="h5" color="text.secondary">
                                     Deploy your smart contracts and increase your blockchain interactions
                                     with our easy-to-use tools and intuitive interface.
                                 </Typography>

@@ -1,4 +1,6 @@
 import { Box, Card, CardContent, styled } from "@mui/material";
+import React from "react";
+
 
 export const WelcomeSectionBox = styled(Box)(({ theme }) => ({
     width: '100%',
@@ -6,10 +8,15 @@ export const WelcomeSectionBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.background.default,
 }));
 
-export const DefaultHomeSection = styled(Box)(({ theme }) => ({
+export const DefaultHomeSection = styled(Box)<{backgroundImage?: string, children?: React.ReactNode}>(({ theme, backgroundImage }) => ({
     width: '100%',
-    padding: '10rem 0',
-    backgroundColor: theme.palette.background.default,
+    padding: '5rem 0',
+    margin: '5rem 0',
+    backgroundColor: backgroundImage ? 'transparent' : theme.palette.background.default,
+    backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
+    backgroundSize: 'cover',
+    backgroundPosition: 'top',
+    backgroundAttachment: 'fixed',
     borderRadius: '12px',
     '.two-column-card': {
         display: 'flex',
