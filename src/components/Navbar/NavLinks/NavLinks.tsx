@@ -1,8 +1,8 @@
 import { Button } from "@mui/material"
 import { NavLink } from "react-router"
 
-import { NavLinksContainer } from "../styled/Navbar"
-import { INavbarLink } from "./models"
+import { NavLinksContainer } from "./NavLinks.style"
+import { INavbarLink } from "../navbar.models"
 
 interface NavLinksProps {
   links: INavbarLink[],
