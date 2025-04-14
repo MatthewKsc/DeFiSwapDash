@@ -1,12 +1,12 @@
-import {AppBar, Toolbar, useMediaQuery, useTheme} from "@mui/material";
+import { Toolbar, useMediaQuery, useTheme} from "@mui/material";
 import { HomeFilled, Publish, Savings, SwapCalls } from "@mui/icons-material";
 
-import { NavBarContainer } from "../styled/Navbar";
+import { NavBarAppBar, NavBarContainer } from "./Navbar.style";
+import { INavbarLink } from "./navbar.models";
 import NavLinksMobile from "./NavLinksMobile";
-import { INavbarLink } from "./models";
-import NavLinks from "./NavLinks";
-import NavLogo from "./NavLogo";
-import NavAuth from "./NavAuth";
+import NavLinks from "./NavLinks/NavLinks";
+import NavLogo from "./NavLogo/NavLogo";
+import NavAuth from "./NavAuth/NavAuth";
 
 const applicationLinks: INavbarLink[] = [
   { label: 'Home', to: '/', icon: <HomeFilled />, disabled: false, onlyMobileView: true },
@@ -20,16 +20,7 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <AppBar
-      enableColorOnDark
-      sx={{
-        position: "fixed",
-        boxShadow: 0,
-        bgcolor: 'transparent',
-        backgroundImage: 'none',
-        mt: { sm: 0, md: 'calc(var(--template-frame-height, 0px) + 28px)' },
-        padding: { md: '0 1rem', xl: '0' }
-      }}>
+    <NavBarAppBar enableColorOnDark>
         <NavBarContainer maxWidth={ "xl" }>
           <Toolbar disableGutters>
               <NavLogo />
@@ -37,7 +28,7 @@ function Navbar() {
               <NavAuth isMobile={isMobile} />
           </Toolbar>
         </NavBarContainer>
-    </AppBar>
+    </NavBarAppBar>
   )
 }
 

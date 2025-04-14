@@ -1,4 +1,4 @@
-import { IDexInformationCard, IFooterConnectWithUsIcon, IFooterQuickLink } from "./models";
+import { IDexInformationCard, IFooterConnectWithUsIcon, IFooterQuickLink } from "./home.models";
 import InstagramIcon from "../../icons/InstagramIcon";
 import FacebookIcon from "../../icons/FacebookIcon";
 import XTwitterIcon from "../../icons/XTwitterIcon";

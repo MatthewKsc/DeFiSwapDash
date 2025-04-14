@@ -1,6 +1,6 @@
+import DeFiSwapDashIcon from "../../../icons/DeFiSwapDashIcon";
+import { NavLogoContainer } from "./NavLogo.style";
 import { NavLink } from "react-router";
-import DeFiSwapDashIcon from "../../icons/DeFiSwapDashIcon";
-import { NavLogoContainer } from "../styled/Navbar";
 
 function NavLogo() {
   return (

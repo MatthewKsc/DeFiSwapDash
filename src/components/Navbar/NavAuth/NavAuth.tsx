@@ -1,5 +1,6 @@
 import { AccountBalanceWallet } from '@mui/icons-material'
-import { Box, Button } from '@mui/material'
+import { Button } from '@mui/material'
+import { NavAuthBox } from './NavAuth.style'
 
 interface NavAuthProps {
   isMobile: boolean,
@@ -13,11 +14,11 @@ function NavAuth(props: NavAuthProps) {
   }
 
   return (
-    <Box sx={{ flexGrow: 0 }}>
+    <NavAuthBox>
         <Button size="medium" startIcon={<AccountBalanceWallet />} onClick={signInButtonClick}>
           {!props.isMobile && 'Connect/Sign In'}
         </Button>
-    </Box>
+    </NavAuthBox>
   )
 }
 

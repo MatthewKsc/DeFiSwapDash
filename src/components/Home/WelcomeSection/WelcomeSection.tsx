@@ -1,16 +1,17 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
-import { WelcomeSectionBox } from '../styled/Home'
+import { Button, Grid, Typography } from '@mui/material'
 import { NavLink } from 'react-router'
+
+import { WelcomeGridContainer, WelcomeImageBox, WelcomeSectionBox } from './WelcomeSection.style'
 
 function WelcomeSection() {
   return (
     <WelcomeSectionBox>
-            <Grid container spacing={4} width={'xl'} alignItems="center" justifyContent="space-between">
+            <WelcomeGridContainer container spacing={4}>
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <Typography variant="h1" component="h1" gutterBottom>
+                    <Typography variant="h1" gutterBottom>
                         Welcome to DeFiSwapDash
                     </Typography>
-                    <Typography variant="h3" gutterBottom sx={{ color: 'text.secondary', mb: 4 }}>
+                    <Typography variant="h3" gutterBottom>
                         Seamless and efficient trading, portfolio tracking and chain explorer
                     </Typography>
                     <Button component={NavLink} to="/swap" variant="contained" color="primary" size="large">
@@ -18,13 +19,11 @@ function WelcomeSection() {
                     </Button>
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <Box
-                        component="img"
+                    <WelcomeImageBox
                         src="src/assets/welcome-showcase.png"
-                        alt="Crypto Trading Platform"
-                        sx={{ width: '100%', height: 'auto', borderRadius: 2 }}/>
+                        alt="Crypto Trading Platform" />
                 </Grid>
-            </Grid>
+            </WelcomeGridContainer>
     </WelcomeSectionBox>
   )
 }

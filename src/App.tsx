@@ -1,7 +1,9 @@
-import { Outlet } from 'react-router'
 import { Container } from '@mui/material'
-import Navbar from './components/Navbar/Navbar'
+import { Outlet } from 'react-router'
 import './App.css'
+
+import Footer from './components/Home/Footer/Footer'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       >
         <Outlet />
       </Container>
+
+      <Footer />
     </>
   )
 }

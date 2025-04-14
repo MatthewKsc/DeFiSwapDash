@@ -1,7 +1,8 @@
-import { Container, Grid, Typography, Stack, IconButton, List, ListItem, ListItemText } from "@mui/material";
-import { footerConnectWithUsIcons, footerQuickLinks } from "./consts";
-import { FooterBox } from "../styled/Home";
+import { Container, Grid, Typography, IconButton, ListItem, ListItemText } from "@mui/material";
 import { NavLink } from "react-router";
+
+import { FooterBox, FooterConnectIconsStack, FooterQuickLinkList } from "./Footer.style";
+import { footerConnectWithUsIcons, footerQuickLinks } from "../home.consts";
 
 export default function Footer() {
   return (
@@ -18,13 +19,13 @@ export default function Footer() {
                     <Typography variant="h5" gutterBottom textAlign='center'>
                         Connect With Us
                     </Typography>
-                    <Stack direction="row" spacing={1} justifyContent='center'>
+                    <FooterConnectIconsStack>
                         {footerConnectWithUsIcons.map((icon, index) => (
-                            <IconButton key={index} component={NavLink} to={icon.url} color="inherit" aria-label={icon.label}>
+                            <IconButton key={index} component={NavLink} to={icon.url} aria-label={icon.label}>
                                 {icon.icon({})}
                             </IconButton>
                         ))}
-                    </Stack>
+                    </FooterConnectIconsStack>
                 </Grid>
                 
                 <Grid size={{ xs: 12, md: 12, lg: 2, xl: 3 }}>
@@ -37,17 +38,17 @@ export default function Footer() {
                     <Typography variant="h5" gutterBottom textAlign='center'>
                         Quick Links
                     </Typography>
-                    <List dense sx={{ display: 'flex', alignItems: 'center', gap: '1rem', textWrap: 'nowrap' }}>
+                    <FooterQuickLinkList dense>
                         {footerQuickLinks.map((link, index) => (
                             <ListItem key={index} disablePadding>
-                                <ListItemText sx={{ textAlign: 'center' }}>
-                                    <a href={link.url} color="inherit" target="_blank">
+                                <ListItemText>
+                                    <a href={link.url} target="_blank">
                                         {link.title}
                                     </a>
                                 </ListItemText>
                             </ListItem>
                         ))}
-                    </List>
+                    </FooterQuickLinkList>
                 </Grid>
             </Grid>
         </Container>

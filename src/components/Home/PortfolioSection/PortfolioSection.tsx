@@ -1,6 +1,8 @@
-import { Container, Grid, Typography, Button, Box } from '@mui/material'
-import { DefaultHomeSection } from '../styled/Home'
+import { Container, Grid, Typography, Button } from '@mui/material'
 import { NavLink } from 'react-router'
+
+import { PortfolioDescriptionGridItem, PortfolioImageBox } from './PortfolioSection.style'
+import { DefaultHomeSection } from '../Home.style'
 
 function PortfolioSection() {
   return (
@@ -8,30 +10,23 @@ function PortfolioSection() {
         <Container maxWidth="xl">
             <Grid container spacing={4} alignItems="center">
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <Box
-                        component="img"
+                    <PortfolioImageBox
                         src="src/assets/portfolio-showcase.png"
                         alt="Portfolio Dashboard"
-                        sx={{
-                            width: '100%',
-                            height: 'auto',
-                            borderRadius: 2,
-                            boxShadow: 3,
-                        }}
                     />
                 </Grid>
-                <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
-                    <Typography variant="h1" gutterBottom textAlign='right'>
+                <PortfolioDescriptionGridItem size={{ xs: 12, md: 6 }}>
+                    <Typography variant="h1" gutterBottom>
                         Track and Manage Portfolio
                     </Typography>
-                    <Typography variant="h5" gutterBottom sx={{ color: 'text.secondary', mb: 4, textAlign: 'right' }}>
+                    <Typography variant="h5" gutterBottom>
                         Get a comprehensive view of all your crypto assets across multiple chains in one dashboard.
                         Monitor performance, track gains, and analyze your investment strategy with powerful tools.
                     </Typography>
                     <Button component={NavLink} to="/portfolio" variant="contained" color="primary" size="large" disabled>
                         View Portfolio
                     </Button>
-                </Grid>
+                </PortfolioDescriptionGridItem>
             </Grid>
         </Container>
     </DefaultHomeSection>

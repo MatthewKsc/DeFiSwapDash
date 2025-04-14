@@ -1,6 +1,6 @@
 import { Container, Typography, Grid, CardContent } from '@mui/material';
-import { DefaultHomeSection, FeatureCard } from '../styled/Home';
-import { dexInfoCards } from './consts';
+import { DefaultHomeSection, FeatureCard } from '../Home.style';
+import { dexInfoCards } from '../home.consts';
 
 function DexSection() {
   return (

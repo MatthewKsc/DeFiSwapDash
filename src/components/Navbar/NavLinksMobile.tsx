@@ -1,7 +1,7 @@
 import { Button, IconButton, MenuItem } from '@mui/material'
 import { Menu as MenuIcon } from "@mui/icons-material";
 import Menu from '@mui/material/Menu';
-import { INavbarLink } from './models'
+import { INavbarLink } from './navbar.models'
 import { useState } from 'react';
 import { NavLink } from 'react-router';
 
