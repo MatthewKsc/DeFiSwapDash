@@ -1,7 +1,7 @@
 import { Container, Grid, Typography, Stack, IconButton, List, ListItem, ListItemText } from "@mui/material";
-import { footerConnectWithUsIcons, footerQuickLinks } from "./consts";
-import { FooterBox } from "../styled/Home";
+import { footerConnectWithUsIcons, footerQuickLinks } from "../home.consts";
 import { NavLink } from "react-router";
+import { FooterBox } from "./Footer.style";
 
 export default function Footer() {
   return (

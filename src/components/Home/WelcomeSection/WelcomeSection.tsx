@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
-import { WelcomeSectionBox } from '../styled/Home'
 import { NavLink } from 'react-router'
+import { WelcomeSectionBox } from './WelcomeSection.style'
 
 function WelcomeSection() {
   return (

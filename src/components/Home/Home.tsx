@@ -1,8 +1,7 @@
-import BlockchainInteractionsSection from './BlockchainInteractionsSection'
-import PortfolioSection from './PortfolioSection'
-import WelcomeSection from './WelcomeSection'
-import DexSection from './DexSection'
-import Footer from './Footer'
+import BlockchainInteractionsSection from './BlockchainInteractionsSection/BlockchainInteractionsSection'
+import PortfolioSection from './PortfolioSection/PortfolioSection'
+import WelcomeSection from './WelcomeSection/WelcomeSection'
+import DexSection from './DexSection/DexSection'
 
 function Home() {
   return (
@@ -11,7 +10,6 @@ function Home() {
         <DexSection />
         <PortfolioSection />
         <BlockchainInteractionsSection />
-        <Footer />
     </>
   )
 }

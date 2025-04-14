@@ -1,7 +1,9 @@
 import { Container, Grid, Typography, Button } from "@mui/material"
-import { BlockchainCardContent, DefaultHomeSection, FeatureCard } from "../styled/Home"
-import { NavLink } from "react-router"
 import { Publish, WavingHandSharp } from "@mui/icons-material"
+import { NavLink } from "react-router"
+
+import { DefaultHomeSection, FeatureCard } from "../Home.style"
+import { BlockchainCardContent } from "./BlockchainInteractionsSection.style"
 
 function BlockchainInteractionsSection() {
   return (

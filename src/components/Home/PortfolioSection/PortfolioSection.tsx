@@ -1,5 +1,5 @@
 import { Container, Grid, Typography, Button, Box } from '@mui/material'
-import { DefaultHomeSection } from '../styled/Home'
+import { DefaultHomeSection } from '../Home.style'
 import { NavLink } from 'react-router'
 
 function PortfolioSection() {
